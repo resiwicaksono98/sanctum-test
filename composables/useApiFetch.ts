@@ -9,7 +9,7 @@ export const useApiFetch = <T>(
   const token = useCookie("XSRF-TOKEN");
 
   if (token) {
-    headers["X-XSRF-TOKEN"] = token.value;
+    headers["X-Xsrf-Token"] = token.value;
   }
 
   if (process.server) {
