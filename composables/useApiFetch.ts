@@ -19,7 +19,7 @@ export const useApiFetch = <T>(
     };
   }
 
-  return useFetch(`http://localhost:8000${path}`, {
+  return useFetch(`https://api.trait.id${path}`, {
     credentials: "include",
     watch: false,
     ...options,
