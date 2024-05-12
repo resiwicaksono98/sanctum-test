@@ -15,13 +15,12 @@ export const useApiFetch = <T>(
   if (process.server) {
     headers = {
       ...headers,
-      ...useRequestHeaders(["referer", "cookie"])
+      ...useRequestHeaders(["cookie"])
     };
   }
 
   return useFetch(`https://api.trait.id${path}`, {
     credentials: "include",
-    watch: false,
     ...options,
     headers: {
       ...headers,
